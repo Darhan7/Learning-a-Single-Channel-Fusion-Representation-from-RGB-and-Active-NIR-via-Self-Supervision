@@ -1,0 +1,61 @@
+# ===== Standalone FusionSelfSup =====
+# This config is intentionally dedicated to the standalone fusion_selfsup project.
+
+model:
+  dmin_px: 0.05
+  dmax_px: 256.0
+
+loss:
+  stereo_auto_mask: true
+  temporal_auto_mask: true
+  ssim_alpha: 0.85
+
+data:
+  root: ../datasets/pixelnir
+  size: [540, 720]
+  mode: stereo_only
+  temporal_stride: 1
+  batch_size: 4
+  num_workers: 4
+  augment: true
+  train_list: ../data_paths/splits_full/train.txt
+  val_list:   ../data_paths/splits_full/val.txt
+  test_list:  ../data_paths/splits_full/test.txt
+  load_disp: false
+  allow_inline_disp_fallback: false
+
+train:
+  mode: fusion_selfsup
+  epochs: 50
+  lr: 0.0001
+  lr_min: 0.000005
+  lr_scheduler: cosine
+  weight_decay: 0.0
+  amp: true
+  log_dir: ../exp_logs/pixelnir/fusion_selfsup
+  save_every: 100
+  val_viz_every: 0
+  save_test_viz: false
+  test_viz_copy_overlay_check: true
+  resume_ckpt: null
+  resume_optim: false
+  eval_only: false
+  eval_val: true
+  eval_test: false
+  eval_test_depth_sparse: true
+  early_stop_patience: 0
+  device: cuda
+  seed: 42
+  log_interval: 50
+  strict_selfsup: true
+  fuse_feat_dim: 256
+  fuse_attn_reduction: 4
+  fuse_use_guided_filter: false
+  fuse_guided_radius: 5
+  fuse_viz_unique_dir: true
+  lambda_fuse_align: 1.0
+  lambda_fuse_grad: 0.2
+  lambda_fuse_stereo_selfsup: 1.0
+  lambda_fuse_temporal_selfsup: 0.0
+  lambda_fuse_smooth: 0.002
+  lambda_fuse_weight_entropy: 0.001

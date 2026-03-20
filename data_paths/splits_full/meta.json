@@ -1,0 +1,110 @@
+{
+  "dataset_root": "datasets/pixelnir",
+  "out_dir": "data_paths/splits_full",
+  "seed": 42,
+  "val_ratio": 0.1,
+  "test_ratio": 0.1,
+  "stratify_daynight": true,
+  "min_val_per_class": 1,
+  "min_test_per_class": 1,
+  "day_hours": {
+    "start": 7,
+    "end": 19
+  },
+  "require_images": true,
+  "min_frames_per_seq": 3,
+  "counts": {
+    "n_sequences_total": 10,
+    "n_sequences_kept": 10,
+    "n_sequences_dropped": 0,
+    "n_sequences_train": 6,
+    "n_sequences_val": 2,
+    "n_sequences_test": 2,
+    "n_frames_train": 10471,
+    "n_frames_val": 3090,
+    "n_frames_test": 3624,
+    "n_frames_total": 17185
+  },
+  "sequences": [
+    {
+      "seq_outer": "09-05-17-34-36",
+      "seq_root_rel": "09-05-17-34-36/09-05-17-34-36",
+      "hour": 17,
+      "day_label": "day",
+      "n_frames": 1823,
+      "split": "val"
+    },
+    {
+      "seq_outer": "09-08-17-27-33",
+      "seq_root_rel": "09-08-17-27-33/09-08-17-27-33",
+      "hour": 17,
+      "day_label": "day",
+      "n_frames": 2290,
+      "split": "train"
+    },
+    {
+      "seq_outer": "09-09-19-31-19",
+      "seq_root_rel": "09-09-19-31-19/09-09-19-31-19",
+      "hour": 19,
+      "day_label": "night",
+      "n_frames": 1267,
+      "split": "val"
+    },
+    {
+      "seq_outer": "09-09-19-46-45",
+      "seq_root_rel": "09-09-19-46-45/09-09-19-46-45",
+      "hour": 19,
+      "day_label": "night",
+      "n_frames": 1137,
+      "split": "test"
+    },
+    {
+      "seq_outer": "09-09-20-04-34",
+      "seq_root_rel": "09-09-20-04-34/09-09-20-04-34",
+      "hour": 20,
+      "day_label": "night",
+      "n_frames": 1210,
+      "split": "train"
+    },
+    {
+      "seq_outer": "09-20-13-45-57",
+      "seq_root_rel": "09-20-13-45-57/09-20-13-45-57",
+      "hour": 13,
+      "day_label": "day",
+      "n_frames": 1408,
+      "split": "train"
+    },
+    {
+      "seq_outer": "09-28-16-48-17",
+      "seq_root_rel": "09-28-16-48-17/09-28-16-48-17",
+      "hour": 16,
+      "day_label": "day",
+      "n_frames": 1167,
+      "split": "train"
+    },
+    {
+      "seq_outer": "09-28-17-06-04",
+      "seq_root_rel": "09-28-17-06-04/09-28-17-06-04",
+      "hour": 17,
+      "day_label": "day",
+      "n_frames": 1417,
+      "split": "train"
+    },
+    {
+      "seq_outer": "09-28-21-15-50",
+      "seq_root_rel": "09-28-21-15-50/09-28-21-15-50",
+      "hour": 21,
+      "day_label": "night",
+      "n_frames": 2979,
+      "split": "train"
+    },
+    {
+      "seq_outer": "10-01-16-20-28",
+      "seq_root_rel": "10-01-16-20-28/10-01-16-20-28",
+      "hour": 16,
+      "day_label": "day",
+      "n_frames": 2487,
+      "split": "test"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+# Core DL stack
+torch==2.1.2
+torchvision==0.16.2
+timm==0.9.12
+einops==0.6.1
+transformers>=4.37.2
+diffusers>=0.25.0
+huggingface-hub>=0.20.0
+safetensors>=0.4.2
+
+# Vision & numerics
+opencv-python>=4.8.1.78
+numpy>=1.24.0
+scipy>=1.10.0
+scikit-image>=0.21.0
+imageio>=2.31.0
+pillow>=9.5.0
+matplotlib>=3.7.0
+tqdm>=4.66.0
+opt_einsum>=3.3.0
+pyyaml>=6.0.1
+h5py>=3.9.0
+pandas>=2.0.3
+
+# Logging / notebooks
+tensorboard>=2.14.0
+ipython>=8.12.0
+ipywidgets>=8.0.0
